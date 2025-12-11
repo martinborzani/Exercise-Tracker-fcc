@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Exercise Tracker</title>
+    <link rel="stylesheet" href="/public/style.css" />
+  </head>
+  <body>
+    <h1>Exercise Tracker</h1>
+
+    <h2>Create User</h2>
+    <form action="/api/users" method="post">
+      <input type="text" name="username" placeholder="username" required />
+      <button type="submit">Create</button>
+    </form>
+
+    <h2>Add Exercise</h2>
+    <form id="exercise-form" method="post">
+      <input type="text" name="userId" placeholder="User ID (_id)" required />
+      <input type="text" name="description" placeholder="description" required />
+      <input type="number" name="duration" placeholder="duration (min)" required />
+      <input type="date" name="date" />
+      <button type="submit">Add</button>
+    </form>
+
+    <h2>Get Logs</h2>
+    <p>GET /api/users/:_id/logs?from=YYYY-MM-DD&to=YYYY-MM-DD&limit=10</p>
+  </body>
+</html>
